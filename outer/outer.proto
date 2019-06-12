@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package outer;
+
+import "inner/inner.proto";
+
+option go_package = "outer";
+
+message Outer {
+  int32 number = 1;
+  inner.Inner inner = 2;
+}
